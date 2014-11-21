@@ -14,7 +14,7 @@ data = fd.read()
 query = {'len': str(len(data)),
 	 'type': 'image/jpeg',
 	 'md5': hashlib.md5(data).hexdigest()}
-url = 'http://zhuangbeiku.com/storage?%s' % urllib.urlencode(query)
+url = 'http://127.0.0.1:8888/storage?%s' % urllib.urlencode(query)
 print url
 request = urllib2.Request(url)
 response = urllib2.urlopen(request)
